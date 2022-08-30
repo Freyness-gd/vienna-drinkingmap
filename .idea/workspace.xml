@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main">
       <change afterPath="$PROJECT_DIR$/graph/src/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/src/Way.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/map.osm" beforeDir="false" afterPath="$PROJECT_DIR$/data/map.osm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/graph.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graph/graph.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/Street.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Street.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Vertex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OSMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSMParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
@@ -102,6 +95,7 @@
       <workItem from="1661333818429" duration="9789000" />
       <workItem from="1661437547240" duration="10183000" />
       <workItem from="1661458255471" duration="3644000" />
+      <workItem from="1661848606591" duration="323000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Data + Dependencies">
       <created>1660571442961</created>
@@ -124,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660571574860</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Structure of Classes:&#10;- Edge&#10;- Street&#10;- Vertex&#10;&#10;And Interface WAY">
+      <created>1661848930520</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661848930520</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +148,7 @@
     <MESSAGE value="Added Test Data + Dependencies" />
     <MESSAGE value="Added Graph Classes" />
     <MESSAGE value="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main" />
+    <MESSAGE value="Structure of Classes:&#10;- Edge&#10;- Street&#10;- Vertex&#10;&#10;And Interface WAY" />
+    <option name="LAST_COMMIT_MESSAGE" value="Structure of Classes:&#10;- Edge&#10;- Street&#10;- Vertex&#10;&#10;And Interface WAY" />
   </component>
 </project>
