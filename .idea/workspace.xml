@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="Added Test Data + Dependencies">
-      <change afterPath="$PROJECT_DIR$/data/map.osm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/graph.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/src/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/src/Street.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/src/Vertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CodeDraw.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.30.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OSM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OSMParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main">
+      <change afterPath="$PROJECT_DIR$/graph/src/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graph/src/Way.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vienna-drinkingmap.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vienna-drinkingmap.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/map.osm" beforeDir="false" afterPath="$PROJECT_DIR$/data/map.osm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/graph.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graph/graph.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Street.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Street.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OSMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSMParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -60,20 +59,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "D:/Projects/WienMap/vienna-drinkingmap/vienna-drinkingmap/lib",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/WienMap/vienna-drinkingmap/vienna-drinkingmap/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
@@ -97,8 +96,35 @@
       <option name="presentableId" value="Default" />
       <updated>1660147973344</updated>
       <workItem from="1660147976055" duration="535000" />
-      <workItem from="1660567129918" duration="4222000" />
+      <workItem from="1660567129918" duration="6670000" />
+      <workItem from="1661161189815" duration="1842000" />
+      <workItem from="1661164639078" duration="2982000" />
+      <workItem from="1661333818429" duration="9789000" />
+      <workItem from="1661437547240" duration="10183000" />
+      <workItem from="1661458255471" duration="3644000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Test Data + Dependencies">
+      <created>1660571442961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660571442961</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Graph Classes">
+      <created>1660571521608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660571521608</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main">
+      <created>1660571574860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660571574860</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,8 +142,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added Test Data + Dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Test Data + Dependencies" />
+    <MESSAGE value="Added Graph Classes" />
+    <MESSAGE value="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main" />
   </component>
 </project>
