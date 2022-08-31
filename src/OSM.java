@@ -33,11 +33,11 @@ public class OSM {
         this.minlat = minlat;
         this.maxlat = maxlat;
 
-        System.out.println("Constraints set to: \n --------------------\n");
-        System.out.println("Min Lon: " + minlon);
-        System.out.println("Max Lon: " + maxlon);
-        System.out.println("Min Lat: " + minlat);
-        System.out.println("Max Lat: " + maxlat +"\n");
+//        System.out.println("Constraints set to: \n --------------------\n");
+//        System.out.println("Min Lon: " + minlon);
+//        System.out.println("Max Lon: " + maxlon);
+//        System.out.println("Min Lat: " + minlat);
+//        System.out.println("Max Lat: " + maxlat +"\n");
     }
 
     public void test(){

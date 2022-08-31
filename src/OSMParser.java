@@ -12,8 +12,11 @@ public class OSMParser {
 
     private static OSMParser parser;
     private static XMLEventReader eventReader;
+    private final String path;
 
     private OSMParser(String path) {
+
+        this.path = path;
 
         try{
             XMLInputFactory factory = XMLInputFactory.newInstance();
@@ -31,6 +34,13 @@ public class OSMParser {
     }
 
     public void getBounds(OSM osm) throws XMLStreamException {
+
+        try{
+            XMLInputFactory factory = XMLInputFactory.newInstance();
+            eventReader = factory.createXMLEventReader(new FileReader(path));
+
+        } catch (FileNotFoundException e) { e.printStackTrace(); }
+        catch (XMLStreamException e) { e.printStackTrace(); }
 
         boolean boundsFound = false;
 
@@ -64,6 +74,14 @@ public class OSMParser {
     }
 
     public void getVertices(Map<String, Vertex> vertex){
+
+        try{
+            XMLInputFactory factory = XMLInputFactory.newInstance();
+            eventReader = factory.createXMLEventReader(new FileReader(path));
+
+        } catch (FileNotFoundException e) { e.printStackTrace(); }
+        catch (XMLStreamException e) { e.printStackTrace(); }
+
         try{
             while(eventReader.hasNext()){
 
@@ -102,6 +120,13 @@ public class OSMParser {
         String f_name = "";
         String f_type = "none";
         String saved_k = "";
+
+        try{
+            XMLInputFactory factory = XMLInputFactory.newInstance();
+            eventReader = factory.createXMLEventReader(new FileReader(path));
+
+        } catch (FileNotFoundException e) { e.printStackTrace(); }
+        catch (XMLStreamException e) { e.printStackTrace(); }
 
         try{
 
@@ -175,116 +200,79 @@ public class OSMParser {
     }
 
 
-    public ArrayList<Street> getStreets(Map<String, Vertex> vertices){
+    public ArrayList<Street> getStreets (Map<String, Vertex> vertices) throws XMLStreamException, FileNotFoundException {
 
 
-        Map<String, Street> map = new HashMap<>();
-        int line = 0;
-        int lostNodes = 0;
+        XMLInputFactory factory = XMLInputFactory.newInstance();
+        eventReader = factory.createXMLEventReader(new FileReader(path));
+
+
+
+
         int nr_streets = 0;
         ArrayList<Street> streets = new ArrayList<>();
+        String saved_k = "";
 
-        try{
+        while(eventReader.hasNext()){
+            XMLEvent event = eventReader.nextEvent();
 
-            while(eventReader.hasNext()){
+            String f_id = "none";
+            String f_type = "none";
+            String f_name = "none";
+            ArrayList<String> f_nodes = new ArrayList<>();
+
+            if(event.getEventType() == XMLStreamConstants.START_ELEMENT){
+                StartElement s = event.asStartElement();
+                String name = s.getName().getLocalPart();
+
+                if(name.equalsIgnoreCase("way")){
+                    Iterator<Attribute> it = s.getAttributes();
+                    f_id = it.next().getValue();
 
 
-                XMLEvent event = eventReader.nextEvent();
-                line = event.getLocation().getLineNumber();
+                    while(eventReader.hasNext()){
+                        event = eventReader.nextEvent();
 
-                if(event.getEventType() == XMLStreamConstants.START_ELEMENT){
-
-                    StartElement s = event.asStartElement();
-                    String name = s.getName().getLocalPart();
-
-                    if(name.equalsIgnoreCase("way")){
-                        ArrayList<String> f_nodes = new ArrayList<>();
-                        String f_id = "none";
-                        String f_name = "none";
-                        String f_type = "none";
-                        String saved_k = "";
-
-                        f_id = s.getAttributes().next().getValue();
-
-                        while(eventReader.hasNext()){
-                            event = eventReader.nextEvent();
-                            line = event.getLocation().getLineNumber();
-
-                            if(event.getEventType() == XMLStreamConstants.END_ELEMENT && event.asEndElement().getName().getLocalPart().equalsIgnoreCase("way")){
-                                //System.out.print("Tag: " + event.asEndElement().getName().getLocalPart() + " / ");
-                                //System.out.println("On line: " + event.getLocation().getLineNumber());
-                                if(f_id.equals("none") || /*f_name.equals("none") ||*/ f_type.equals("none")){
-                                    System.out.println("END ELEMENT: " + event.asEndElement().getName().getLocalPart());
-                                    break;
-                                }
-                                else{
-                                    /*if(map.containsKey(f_name)){
-                                        Street exist = map.get(f_name);
-                                        for(int i = 1; i < f_nodes.size(); i++){
-                                            if(!vertices.containsKey(f_nodes.get(i-1)) || !vertices.containsKey(f_nodes.get(i))){
-                                                //System.out.println("NODE NOT FOUND");
-                                                lostNodes++;
-                                                break;
-                                            }
-                                            nr_streets++;
-                                            exist.addEdge(new Edge(vertices.get(f_nodes.get(i-1)), vertices.get(f_nodes.get(i))));
-                                        }
-                                    }*/
-
-                                    Street newStreet = new Street(f_id, f_name, f_type);
-
-                                    for(int i = 1; i < f_nodes.size(); i++){
-                                        if(!vertices.containsKey(f_nodes.get(i-1)) || !vertices.containsKey(f_nodes.get(i))){
-                                            //System.out.println("NODE NOT FOUND");
-                                            lostNodes++;
-                                            break;
-                                        }
-                                        newStreet.addEdge(new Edge(vertices.get(f_nodes.get(i-1)), vertices.get(f_nodes.get(i))));
-                                    }
-                                    nr_streets++;
-                                    map.put(f_name, newStreet);
-                                    streets.add(newStreet);
-                                    break;
-                                }
-
+                        if(event.getEventType() == XMLStreamConstants.END_ELEMENT &&
+                                event.asEndElement().getName().getLocalPart().equalsIgnoreCase("way")){
+                            if(/*f_name.equals("none") || */!f_type.contains("highway")) break;
+                            Street street = new Street(f_id, f_name, f_type);
+                            for(int i = 1; i < f_nodes.size(); i++){
+                                street.addEdge(new Edge(vertices.get(f_nodes.get(i-1)), vertices.get(f_nodes.get(i))));
                             }
+                            streets.add(street);
+                            break;
+                        }else if (event.getEventType() == XMLStreamConstants.START_ELEMENT){
+                            StartElement event_s = event.asStartElement();
+                            Iterator<Attribute> event_it = event_s.getAttributes();
 
-                            else if(event.getEventType() == XMLStreamConstants.START_ELEMENT) {
-                                StartElement event_s = event.asStartElement();
-                                Iterator<Attribute> event_it = event_s.getAttributes();
-
-                                if (!event_s.getName().getLocalPart().equals("nd")) {
-                                    while (event_it.hasNext()) {
-                                        String sv;
-                                        switch (sv = event_it.next().getValue()) {
-                                            case "highway":
-                                                f_type = "highway-" + saved_k;
-                                                break;
-                                            case "name":
-                                                f_name = saved_k;
-                                                break;
-                                        }
-                                        saved_k = sv;
+                            if(!event_s.getName().getLocalPart().equals("nd")){
+                                while(event_it.hasNext()){
+                                    String sv;
+                                    switch(sv = event_it.next().getValue()){
+                                        case "highway":
+                                            f_type = "highway-" + saved_k;
+                                            break;
+                                        case "name":
+                                            f_name = saved_k;
+                                            break;
                                     }
-                                } else f_nodes.add(event_it.next().getValue());
-
+                                    saved_k = sv;
+                                }
+                            }else{
+                                String node_id = event_it.next().getValue();
+                                if(vertices.containsKey(node_id)){
+                                    f_nodes.add(node_id);
+                                }
                             }
                         }
                     }
-
-
                 }
 
             }
-
-        } catch (XMLStreamException e) { e.printStackTrace(); }
-          catch (NullPointerException e){
-            System.out.println("EROOR PARSING LINE: " + line);
-            e.printStackTrace();
         }
 
-        System.out.println("Number of Streets: " + nr_streets);
-        System.out.println("Number of LOST NODES: " + lostNodes);
+
 
         return streets;
     }
