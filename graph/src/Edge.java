@@ -2,14 +2,14 @@ import codedraw.CodeDraw;
 
 import static java.lang.Math.*;
 
-public class Edge /*extends Street*/ implements Way {
+public class Edge implements Way {
 
     private final String streetName;
     private final Vertex v1, v2;
 
     public Edge(Vertex v1, Vertex v2){
-        //super( "","", "");
-        this.streetName = "";//super.getName();
+
+        this.streetName = "";
         this.v1 = v1;
         this.v2 = v2;
 

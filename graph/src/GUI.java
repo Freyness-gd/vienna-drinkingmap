@@ -41,7 +41,16 @@ public class GUI{
     }
 
     public static void drawNode(Vertex v){
+        cd.setColor(Color.BLACK);
+        cd.fillCircle(mapLon(v.getLon()), windowrange-mapLat(v.getLat()), 3);
+    }
 
+    public static void setColour(Color c){
+        cd.setColor(c);
+    }
+
+    public static void setLineWidth(int w){
+        cd.setLineWidth(w);
     }
 
     public static void drawNode(Map<String, Vertex> v){
