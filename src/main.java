@@ -12,73 +12,59 @@ public class main {
     public static GUI gui = GUI.getInstance(windowrange, osm.getBounds());
     public static OSMParser parser = OSMParser.getInstance("data/map.osm");
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws XMLStreamException, FileNotFoundException {
 
+        ArrayList<Street> streets = parser.getStreets(osm.getVertex());
+        System.out.println("NR STREETS: " + streets.size());
 
-        /*
-        try{
-            parser.getBounds(osm);
+//        for(Street i : streets){
+//            for(Edge e : i.getEdges()){
+//                GUI.drawNode(e.getV1());
+//                GUI.drawNode(e.getV2());
+//            }
+//        }
 
-            Vertex v1 = new Vertex("1", 0.0, 0.0);
-            Vertex v2 = new Vertex("2", 5.0, 0.0);
+        for(Street i : streets){
+            switch(i.getType()){
+                case "highway-primary":
+                    GUI.setColour(Color.red);
+                    GUI.setLineWidth(7);
+                    GUI.drawStreet(i);
+                    break;
+                case "highway-secondary":
+                    GUI.setColour(Color.orange);
+                    GUI.setLineWidth(5);
+                    GUI.drawStreet(i);
+                    break;
+                case "highway-tertiary":
+                    GUI.setColour(Color.GREEN);
+                    GUI.setLineWidth(5);
+                    GUI.drawStreet(i);
+                    break;
+                case "highway-residential":
+                    GUI.setColour(Color.blue);
+                    GUI.setLineWidth(3);
+                    GUI.drawStreet(i);
+                    break;
+                case "highway-pedestrian":
+                case "highway-footway":
+                    GUI.setColour(Color.MAGENTA);
+                    GUI.setLineWidth(3);
+                    GUI.drawStreet(i);
+                    break;
 
-            Vertex v3 = new Vertex("3", 7.0, 3.0);
-            Vertex v4 = new Vertex("4", 10, 5.0);
+                default:
+                    if(i.getType().contains("highway-")){
+                        GUI.setColour(Color.darkGray);
+                        GUI.setLineWidth(3);
+                        GUI.drawStreet(i);
 
-            Edge edge = new Edge("test", v1, v2);
-            Edge edge_s = new Edge("test", v3, v4);
-
-            System.out.println(edge.getLength());
-            parser.getVertices(vertex);
-
-            Street street_test = parser.getWayByID("172434862", vertex);
-
-            cd.setColor(Color.BLACK);
-
-
-            cd.setLineWidth(3);
-            for(Edge i : street_test.getEdges()){
-
-                double startX = mapLon(i.getV1().getLon());
-                double startY = mapLat(i.getV1().getLat());
-                double endX = mapLon(i.getV2().getLon());
-                double endY = mapLat(i.getV2().getLat());
-
-
-                cd.drawLine(startX, cd.getWidth() - startY, endX, cd.getWidth() - endY);
+                    }
             }
-
-            for(Edge i : street_test.getEdges()){
-
-                double f_x = mapLon(i.getV1().getLon());
-                double f_y = mapLat(i.getV1().getLat());
-                double s_x = mapLon(i.getV2().getLon());
-                double s_y = mapLat(i.getV2().getLat());
-
-                cd.fillCircle(f_x, cd.getWidth() - f_y, 2);
-                cd.fillCircle(s_x, cd.getWidth() - s_y, 2);
-
-            }
-
-            cd.show();
-
-
-        } catch (XMLStreamException e) { e.printStackTrace(); }*/
-
-        //streets.putAll(parser.getStreets(osm.getVertex()));
-
-        for(Street s : parser.getStreets(osm.getVertex())){
-            GUI.drawStreet(s);
+            GUI.show();
         }
 
-
-
-        //GUI.drawStreet(parser.getWayByID("203868701", osm.getVertex()));
-
-        GUI.show();
-
+        System.out.println("FINISHED DRAWING");
     }
-
-
 
 }
