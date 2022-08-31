@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph/src/Street.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Street.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OSMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSMParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +93,7 @@
       <workItem from="1661333818429" duration="9789000" />
       <workItem from="1661437547240" duration="10183000" />
       <workItem from="1661458255471" duration="3644000" />
-      <workItem from="1661848606591" duration="7105000" />
+      <workItem from="1661848606591" duration="7442000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Data + Dependencies">
       <created>1660571442961</created>
@@ -142,7 +137,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661849027680</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed getStreets, now all Streets can be drawn by category">
+      <created>1661939027735</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661939027735</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added to GUI:&#10;- setColour&#10;- setLineWidth&#10;- drawNode single">
+      <created>1661939069758</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661939069758</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +177,8 @@
     <MESSAGE value="Structure of Classes:&#10;- Edge&#10;- Street&#10;- Vertex&#10;&#10;And Interface WAY" />
     <MESSAGE value="Changed how &quot;main&quot; accesses OSM and OSMParser&#10;&#10;+ drawing tests&#10;&#10;Added Functions for Parsing:&#10;- All vertices&#10;- A street by ID&#10;- All streets (work in progress)" />
     <MESSAGE value="Added GUI Class for Drawing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added GUI Class for Drawing" />
+    <MESSAGE value="Fixed getStreets, now all Streets can be drawn by category" />
+    <MESSAGE value="Added to GUI:&#10;- setColour&#10;- setLineWidth&#10;- drawNode single" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to GUI:&#10;- setColour&#10;- setLineWidth&#10;- drawNode single" />
   </component>
 </project>

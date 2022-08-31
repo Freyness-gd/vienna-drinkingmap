@@ -28,6 +28,9 @@ public class Street implements Way{
 
     public ArrayList<Edge> getEdges(){ return this.edges; }
 
+    public String getType(){ return this.type; }
+    public String getId(){ return this.id; }
+
     @Override
     public double getLength() {
         return length;
