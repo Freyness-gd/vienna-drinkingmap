@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="Added to GUI:&#10;- setColour&#10;- setLineWidth&#10;- drawNode single">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Street.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Street.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OSMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSMParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DAho0SNgKdKizQvvTvLqb0DDgW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/WienMap/vienna-drinkingmap/vienna-drinkingmap/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="vienna-drinkingmap" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="" />
+      <created>1660147973344</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660147973344</updated>
+      <workItem from="1660147976055" duration="535000" />
+      <workItem from="1660567129918" duration="6670000" />
+      <workItem from="1661161189815" duration="1842000" />
+      <workItem from="1661164639078" duration="2982000" />
+      <workItem from="1661333818429" duration="9789000" />
+      <workItem from="1661437547240" duration="10183000" />
+      <workItem from="1661458255471" duration="3644000" />
+      <workItem from="1661848606591" duration="7442000" />
+      <workItem from="1662028490999" duration="1908000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added Test Data + Dependencies">
+      <created>1660571442961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660571442961</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Graph Classes">
+      <created>1660571521608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660571521608</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main">
+      <created>1660571574860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660571574860</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Structure of Classes:&#10;- Edge&#10;- Street&#10;- Vertex&#10;&#10;And Interface WAY">
+      <created>1661848930520</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661848930520</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changed how &quot;main&quot; accesses OSM and OSMParser&#10;&#10;+ drawing tests&#10;&#10;Added Functions for Parsing:&#10;- All vertices&#10;- A street by ID&#10;- All streets (work in progress)">
+      <created>1661849005237</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661849005237</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added GUI Class for Drawing">
+      <created>1661849027680</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661849027680</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed getStreets, now all Streets can be drawn by category">
+      <created>1661939027735</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661939027735</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added to GUI:&#10;- setColour&#10;- setLineWidth&#10;- drawNode single">
+      <created>1661939069758</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661939069758</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added Test Data + Dependencies" />
+    <MESSAGE value="Added Graph Classes" />
+    <MESSAGE value="Added OSMParser&#10;Added OSM for file informations&#10;Quick Test in main" />
+    <MESSAGE value="Structure of Classes:&#10;- Edge&#10;- Street&#10;- Vertex&#10;&#10;And Interface WAY" />
+    <MESSAGE value="Changed how &quot;main&quot; accesses OSM and OSMParser&#10;&#10;+ drawing tests&#10;&#10;Added Functions for Parsing:&#10;- All vertices&#10;- A street by ID&#10;- All streets (work in progress)" />
+    <MESSAGE value="Added GUI Class for Drawing" />
+    <MESSAGE value="Fixed getStreets, now all Streets can be drawn by category" />
+    <MESSAGE value="Added to GUI:&#10;- setColour&#10;- setLineWidth&#10;- drawNode single" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to GUI:&#10;- setColour&#10;- setLineWidth&#10;- drawNode single" />
+  </component>
+</project>
