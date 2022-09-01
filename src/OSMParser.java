@@ -200,16 +200,15 @@ public class OSMParser {
     }
 
 
-    public ArrayList<Street> getStreets (Map<String, Vertex> vertices) throws XMLStreamException, FileNotFoundException {
+    public HashMap<String, Street> getStreets (Map<String, Vertex> vertices) throws XMLStreamException, FileNotFoundException {
 
 
         XMLInputFactory factory = XMLInputFactory.newInstance();
         eventReader = factory.createXMLEventReader(new FileReader(path));
 
+        HashMap<String, Street> map = new HashMap<>();
 
-
-
-        int nr_streets = 0;
+        int lost_nodes = 0;
         ArrayList<Street> streets = new ArrayList<>();
         String saved_k = "";
 
@@ -240,6 +239,12 @@ public class OSMParser {
                             for(int i = 1; i < f_nodes.size(); i++){
                                 street.addEdge(new Edge(vertices.get(f_nodes.get(i-1)), vertices.get(f_nodes.get(i))));
                             }
+
+                            if(map.containsKey(f_name)){
+                                map.get(f_name).mergeStreet(street);
+                            }else{
+                                map.put(f_name, street);
+                            }
                             streets.add(street);
                             break;
                         }else if (event.getEventType() == XMLStreamConstants.START_ELEMENT){
@@ -263,6 +268,8 @@ public class OSMParser {
                                 String node_id = event_it.next().getValue();
                                 if(vertices.containsKey(node_id)){
                                     f_nodes.add(node_id);
+                                }else{
+                                    lost_nodes++;
                                 }
                             }
                         }
@@ -272,9 +279,11 @@ public class OSMParser {
             }
         }
 
+        System.out.println("LOST NODES: " + lost_nodes);
+        //System.out.println("MAP STREET AMOUNT: " + map.size());
 
 
-        return streets;
+        return map;
     }
 
 }

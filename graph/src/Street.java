@@ -31,6 +31,14 @@ public class Street implements Way{
     public String getType(){ return this.type; }
     public String getId(){ return this.id; }
 
+    public void mergeStreet(Street s){
+
+        for(Edge e : s.getEdges()){
+            this.addEdge(e);
+        }
+
+    }
+
     @Override
     public double getLength() {
         return length;
