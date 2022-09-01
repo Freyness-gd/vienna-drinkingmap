@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="">
+    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="Added to GUI:&#10;- setColour&#10;- setLineWidth&#10;- drawNode single">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph/src/Street.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Street.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OSMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSMParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +96,7 @@
       <workItem from="1661437547240" duration="10183000" />
       <workItem from="1661458255471" duration="3644000" />
       <workItem from="1661848606591" duration="7442000" />
+      <workItem from="1662028490999" duration="1908000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Data + Dependencies">
       <created>1660571442961</created>
