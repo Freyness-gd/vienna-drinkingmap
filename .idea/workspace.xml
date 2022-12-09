@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="" />
+    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment=":loud_sound: updated .gitignore">
+      <change afterPath="$PROJECT_DIR$/graph/src/AdjMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graph/src/Dijkstra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graph/src/VertexRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Dij.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/GFG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Relation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/djd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/graph_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OSMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSMParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="dev" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2DAho0SNgKdKizQvvTvLqb0DDgW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -20,9 +60,43 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "D:/Projects/OOPA3",
+    "settings.editor.selected.configurable": "preferences.rainbow.brackets",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.graph_test">
+    <configuration name="djd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="djd" />
+      <module name="vienna-drinkingmap" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="graph_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="graph_test" />
+      <module name="vienna-drinkingmap" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="vienna-drinkingmap" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.graph_test" />
+        <item itemvalue="Application.main" />
+        <item itemvalue="Application.djd" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,7 +105,57 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660147973344</updated>
+      <workItem from="1662033695732" duration="1342000" />
+      <workItem from="1662035658041" duration="692000" />
+      <workItem from="1662125657966" duration="7489000" />
+      <workItem from="1662397657934" duration="3352000" />
+      <workItem from="1662556707136" duration="622000" />
+      <workItem from="1662573015091" duration="305000" />
+      <workItem from="1662674675306" duration="485000" />
+      <workItem from="1662709644105" duration="7825000" />
+      <workItem from="1662720646039" duration="170000" />
+      <workItem from="1665183334160" duration="407000" />
+      <workItem from="1665314322508" duration="941000" />
+      <workItem from="1665340758565" duration="5000" />
+      <workItem from="1665559438696" duration="204000" />
+      <workItem from="1665562872899" duration="715000" />
+      <workItem from="1665850987375" duration="238000" />
+      <workItem from="1665918487153" duration="15000" />
+      <workItem from="1666830230826" duration="248000" />
+      <workItem from="1666992706801" duration="308000" />
+      <workItem from="1667838631216" duration="22000" />
+      <workItem from="1667920334459" duration="151000" />
+      <workItem from="1667920506201" duration="859000" />
+      <workItem from="1667921401318" duration="2637000" />
+      <workItem from="1667926373543" duration="164000" />
+      <workItem from="1667927046682" duration="247000" />
+      <workItem from="1669123477193" duration="344000" />
+      <workItem from="1669401975236" duration="784000" />
+      <workItem from="1669456649820" duration="178000" />
+      <workItem from="1670596561905" duration="335000" />
     </task>
+    <task id="LOCAL-00001" summary=":loud_sound: updated .gitignore">
+      <created>1666830371145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666830371145</updated>
+    </task>
+    <task id="LOCAL-00002" summary=":loud_sound: updated .gitignore">
+      <created>1666830407343</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666830407343</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=":loud_sound: updated .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=":loud_sound: updated .gitignore" />
   </component>
 </project>

@@ -28,10 +28,10 @@ public class GUI{
     }
 
     public static void drawEdge(Edge e){
-        double startX = mapLon(e.getV1().getLon());
-        double startY = mapLat(e.getV1().getLat());
-        double endX = mapLon(e.getV2().getLon());
-        double endY = mapLat(e.getV2().getLat());
+        double startX = mapLon(e.gethead().getLon());
+        double startY = mapLat(e.gethead().getLat());
+        double endX = mapLon(e.gettail().getLon());
+        double endY = mapLat(e.gettail().getLat());
 
         cd.drawLine(startX, windowrange - startY, endX, windowrange - endY);
     }

@@ -8,24 +8,27 @@ import javax.xml.stream.*;
 import javax.xml.stream.events.*;
 
 
-public class OSMParser {
+public class OSMParser{
 
     private static OSMParser parser;
     private static XMLEventReader eventReader;
-    private final String path;
+    private static String path;
+    //private static OSM osm;
 
-    private OSMParser(String path) {
+    private OSMParser (String path) {
 
-        this.path = path;
+        //OSMParser.osm = OSM.getInstance(path);
+        OSMParser.path = path;
 
         try{
             XMLInputFactory factory = XMLInputFactory.newInstance();
             eventReader = factory.createXMLEventReader(new FileReader(path));
 
-        } catch (FileNotFoundException e) { e.printStackTrace(); }
-          catch (XMLStreamException e) { e.printStackTrace(); }
+        } catch (FileNotFoundException | XMLStreamException e) { e.printStackTrace(); }
 
     };
+
+    //public static OSM getOsm() { return OSMParser.osm; }
 
     public static synchronized OSMParser getInstance(String path){
         if(parser == null)
@@ -33,14 +36,13 @@ public class OSMParser {
         return parser;
     }
 
-    public void getBounds(OSM osm) throws XMLStreamException {
+    public static void getBounds(OSM osm) throws XMLStreamException {
 
         try{
             XMLInputFactory factory = XMLInputFactory.newInstance();
             eventReader = factory.createXMLEventReader(new FileReader(path));
 
-        } catch (FileNotFoundException e) { e.printStackTrace(); }
-        catch (XMLStreamException e) { e.printStackTrace(); }
+        } catch (FileNotFoundException | XMLStreamException e) { e.printStackTrace(); }
 
         boolean boundsFound = false;
 
@@ -73,22 +75,21 @@ public class OSMParser {
 
     }
 
-    public void getVertices(Map<String, Vertex> vertex){
+    public static void getVertices(Map<String, Vertex> vertex){
 
         try{
             XMLInputFactory factory = XMLInputFactory.newInstance();
             eventReader = factory.createXMLEventReader(new FileReader(path));
 
-        } catch (FileNotFoundException e) { e.printStackTrace(); }
-        catch (XMLStreamException e) { e.printStackTrace(); }
+        } catch (FileNotFoundException | XMLStreamException e) { e.printStackTrace(); }
 
         try{
             while(eventReader.hasNext()){
 
                 if(eventReader.peek().getEventType() == XMLStreamConstants.START_ELEMENT &&
                 eventReader.peek().asStartElement().getName().getLocalPart().equalsIgnoreCase("way")){
-                    System.out.println("Vertices have been parsed succesfully!");
-                    System.out.println("Amount of vertices: " + vertex.size() + "\n");
+                    System.out.println("Vertices parsed successfully!");
+                    //System.out.println("Amount of vertices: " + vertex.size() + "\n");
                     return;
                 }
 
@@ -114,7 +115,7 @@ public class OSMParser {
     }
 
 
-    public Street getWayByID(String id, Map<String, Vertex> vertex){
+    public static Street getWayByID(String id, Map<String, Vertex> vertex){
 
         ArrayList<String> f_nodes = new ArrayList<>();
         String f_name = "";
@@ -125,8 +126,7 @@ public class OSMParser {
             XMLInputFactory factory = XMLInputFactory.newInstance();
             eventReader = factory.createXMLEventReader(new FileReader(path));
 
-        } catch (FileNotFoundException e) { e.printStackTrace(); }
-        catch (XMLStreamException e) { e.printStackTrace(); }
+        } catch (FileNotFoundException | XMLStreamException e) { e.printStackTrace(); }
 
         try{
 
@@ -200,7 +200,7 @@ public class OSMParser {
     }
 
 
-    public HashMap<String, Street> getStreets (Map<String, Vertex> vertices) throws XMLStreamException, FileNotFoundException {
+    public static HashMap<String, Street> getStreets (Map<String, Vertex> vertices) throws XMLStreamException, FileNotFoundException {
 
 
         XMLInputFactory factory = XMLInputFactory.newInstance();
@@ -279,9 +279,10 @@ public class OSMParser {
             }
         }
 
-        System.out.println("LOST NODES: " + lost_nodes);
+        //System.out.println("LOST NODES: " + lost_nodes);
         //System.out.println("MAP STREET AMOUNT: " + map.size());
 
+        System.out.println("Streets parsed successfully!");
 
         return map;
     }
