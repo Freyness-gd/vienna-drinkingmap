@@ -11,12 +11,13 @@ public class VertexRelation {
 
     public double getCosts(){ return this.costs; }
     public Vertex getEnd() { return this.end; }
+    public Vertex getStart() { return this.start; }
 
     @Override
     public String toString(){
 
         StringBuilder sb = new StringBuilder("Relation ");
-        sb.append("with ").append(end.getId()).append(" costs: ").append(this.costs).append("\n");
+        sb.append(start.getId()).append(" with ").append(end.getId()).append(" costs: ").append(this.costs).append("\n");
 
         return sb.toString();
     }

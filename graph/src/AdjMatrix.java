@@ -59,6 +59,10 @@ public class AdjMatrix {
         System.out.println(matrix.get(v));
     }
 
+    public ArrayList<VertexRelation> getConnection(Vertex v){
+        return matrix.get(v);
+    }
+
 }
 
 

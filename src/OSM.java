@@ -51,7 +51,8 @@ public class OSM {
     public static double getMaxLat(){return maxlat;}
     public static double getLonRange(){ return maxlon - minlon; }
     public static double getLatRange(){ return maxlat - minlat; }
-    public static Map<String, Vertex> getVertex(){ return vertex; }
+    public static Vertex getVertex(String id){ return vertex.get(id); }
+    public static Map<String, Vertex> getMap(){ return vertex; }
 
     //minlon, maxlon, minlat, maxlat
     public static Map<String, Double> getBounds() {

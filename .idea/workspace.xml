@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment=":loud_sound: updated .gitignore">
-      <change afterPath="$PROJECT_DIR$/graph/src/AdjMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/src/Dijkstra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/src/VertexRelation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Dij.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/GFG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Relation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/djd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/graph_test.java" afterDir="false" />
+    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/AdjMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/AdjMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Dijkstra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/VertexRelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/VertexRelation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OSMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSMParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,11 +58,15 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
     "last_opened_file_path": "D:/Projects/OOPA3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.rainbow.brackets",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.graph_test">
+  <component name="RunManager" selected="Application.main">
     <configuration name="djd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="djd" />
       <module name="vienna-drinkingmap" />
@@ -91,8 +90,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.graph_test" />
         <item itemvalue="Application.main" />
+        <item itemvalue="Application.graph_test" />
         <item itemvalue="Application.djd" />
       </list>
     </recent_temporary>
@@ -132,7 +131,9 @@
       <workItem from="1669123477193" duration="344000" />
       <workItem from="1669401975236" duration="784000" />
       <workItem from="1669456649820" duration="178000" />
-      <workItem from="1670596561905" duration="335000" />
+      <workItem from="1670596561905" duration="928000" />
+      <workItem from="1670671747676" duration="6000" />
+      <workItem from="1670673711646" duration="2375000" />
     </task>
     <task id="LOCAL-00001" summary=":loud_sound: updated .gitignore">
       <created>1666830371145</created>
@@ -148,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666830407343</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=":white_check_mark: Added Dijkstra Test">
+      <created>1670596942204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670596942204</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +164,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":loud_sound: updated .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value=":loud_sound: updated .gitignore" />
+    <MESSAGE value=":white_check_mark: Added Dijkstra Test" />
+    <option name="LAST_COMMIT_MESSAGE" value=":white_check_mark: Added Dijkstra Test" />
   </component>
 </project>

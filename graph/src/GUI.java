@@ -45,6 +45,11 @@ public class GUI{
         cd.fillCircle(mapLon(v.getLon()), windowrange-mapLat(v.getLat()), 3);
     }
 
+    public static void drawNode(Vertex v, Color c, double r){
+        cd.setColor(c);
+        cd.fillCircle(mapLon(v.getLon()), windowrange-mapLat(v.getLat()), r);
+    }
+
     public static void setColour(Color c){
         cd.setColor(c);
     }
@@ -64,6 +69,10 @@ public class GUI{
 
     public static void drawStreet(Street s){
         if(s != null)  drawEdge(s.getEdges());
+    }
+
+    public static void drawVertexRelation(VertexRelation v){
+        drawNode(v.getEnd());
     }
 
     public static int mapLon(double val){
