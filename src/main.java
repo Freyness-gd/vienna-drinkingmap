@@ -18,14 +18,7 @@ public class main {
 
         LocalTime start = LocalTime.now();
 
-        streets.putAll(OSMParser.getStreets(OSM.getVertex()));
-
-//        for(Street i : streets.values()){
-//            for(Edge e : i.getEdges()){
-//                GUI.drawNode(e.gethead());
-//                GUI.drawNode(e.gettail());
-//            }
-//        }
+        streets.putAll(OSMParser.getStreets(OSM.getMap()));
 
         for(Street i : streets.values()){
             switch(i.getType()){
@@ -65,39 +58,52 @@ public class main {
                     }*/
             }
 
-            /*for(Edge e : streets.get("Singerstraße").getEdges()){
-                GUI.setColour(Color.cyan);
-                GUI.setLineWidth(3);
-                GUI.drawEdge(e);
-            }*/
+
 
         }
-//        ArrayList<Vertex> toRemove = new ArrayList<>();
-////
-//        System.out.println("Initial size: " + OSM.getVertex().size());
-//
-//       for(Vertex v : OSM.getVertex().values()){
-//           if(!matrix.addConnection(v, streets)){
-//               toRemove.add(v);
-//           }
-//
-//       }
-////
-////        System.out.println("MATRIX: " + matrix.getSize());
-//
-//        for(Vertex v : toRemove){
-//            OSM.getVertex().remove(v.getId());
-//        }
-//
-//        System.out.println("Final size: " + OSM.getVertex().size());
+        ArrayList<Vertex> toRemove = new ArrayList<>();
 
-        //Vertex v = OSM.getVertex().get("2330619457");
+        System.out.println("Initial size: " + OSM.getMap().size());
+
+       for(Vertex v : OSM.getMap().values()){
+           if(!matrix.addConnection(v, streets)){
+               toRemove.add(v);
+           }
+
+       }
+
+        System.out.println("MATRIX: " + matrix.getSize());
+
+        for(Vertex v : toRemove){
+            OSM.getMap().remove(v.getId());
+        }
+
+        System.out.println("Final size: " + OSM.getMap().size());
+
+
+        Vertex source = OSM.getVertex("33196433");
+
+        Dijkstra alg = new Dijkstra(source, OSM.getMap(), matrix);
+
 
         //System.out.println("COSTS: " + matrix.getDistance(OSM.getVertex().get("2330619457"), OSM.getVertex().get("17322928")));
-        matrix.printConnectionById(osm.getVertex().get("33182908"));
-        GUI.drawNode(OSM.getVertex().get("2330619457"));
-        GUI.drawNode(OSM.getVertex().get("17322928"));
+//        matrix.printConnectionById(OSM.getVertex("1068425372"));
+//        GUI.drawNode(OSM.getVertex("1068425372"), Color.ORANGE, 4);
+//        for(VertexRelation i : matrix.getConnection(OSM.getVertex("1068425372"))){
+//            GUI.drawVertexRelation(i);
+//        }
+        //GUI.drawNode(OSM.getVertex().get("2330619457"));
+        //GUI.drawNode(OSM.getVertex().get("17322928"));
+
+//        for(Edge e : streets.get("Michaelerplatz").getEdges()){
+//            GUI.setColour(Color.cyan);
+//            GUI.setLineWidth(3);
+//            GUI.drawEdge(e);
+//        }
+
         GUI.show();
+
+
 
         //System.out.println("Total Run Time: " + (LocalTime.now().getSecond() - start.getSecond()));
     }

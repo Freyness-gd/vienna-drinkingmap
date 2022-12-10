@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Dijkstra {
 
@@ -12,6 +10,7 @@ public class Dijkstra {
         this.source = source;
         this.createMap(map);
         this.graph = graph;
+        this.calculateCosts();
     }
 
     private void createMap(Map<String, Vertex> map){
@@ -21,6 +20,19 @@ public class Dijkstra {
         for(Vertex v : map.values()){
             costMap.put(v, Double.POSITIVE_INFINITY);
         }
+    }
+
+    private void calculateCosts(){
+        Queue<Vertex> queue = new PriorityQueue<>();
+        queue.add(source);
+
+        while(!queue.isEmpty()){
+            for(VertexRelation i : graph.getConnection(queue.poll())){
+                queue.add(i.getEnd());
+                costMap.replace(i.getEnd(), this.graph.getDistance(i.getStart(), i.getEnd()));
+            }
+        }
+
     }
 
 }
