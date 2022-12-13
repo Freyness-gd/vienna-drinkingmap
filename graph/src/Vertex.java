@@ -1,7 +1,7 @@
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
-public class Vertex {
+public class Vertex implements Comparable<Vertex>{
 
     private final String id;
     private final double lon;
@@ -41,4 +41,8 @@ public class Vertex {
         return this.id.equals(v.id);
     }
 
+    @Override
+    public int compareTo(Vertex o) {
+        return (int)this.getDistance(o);
+    }
 }
