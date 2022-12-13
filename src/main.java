@@ -82,6 +82,15 @@ public class main {
 
 
         Vertex source = OSM.getVertex("33196433");
+        System.out.println(matrix.getConnection(source));
+
+//        VertexRelation vr1 = new VertexRelation(OSM.getVertex("33196433"), OSM.getVertex("1950497176"));
+//        VertexRelation vr2 = new VertexRelation(OSM.getVertex("1950497176"), OSM.getVertex("33196433") );
+//        VertexRelation vr3 = new VertexRelation( OSM.getVertex("60571042"), OSM.getVertex("33196433"));
+//
+//        System.out.println("Is the same: " + vr1.equals(vr1));
+//        System.out.println("Is the same: " + vr1.equals(vr2));
+//        System.out.println("Is the same: " + vr1.equals(vr3));
 
         Dijkstra alg = new Dijkstra(source, OSM.getMap(), matrix);
 
@@ -100,6 +109,12 @@ public class main {
 //            GUI.setLineWidth(3);
 //            GUI.drawEdge(e);
 //        }
+
+        GUI.drawNode(source, Color.red, 5);
+
+        for(VertexRelation v : alg.discovered()){
+            GUI.drawVertexRelation(v);
+        }
 
         GUI.show();
 
