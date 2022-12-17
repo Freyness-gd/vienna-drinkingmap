@@ -24,65 +24,70 @@ public class Dijkstra {
         costMap.put(source, new CostNode(source, 0.0));
     }
 
+
     private void calculateCosts(){
 
-        Queue<VertexRelation> queue = new PriorityQueue<VertexRelation>();
+        Queue<VertexRelation> queue = new PriorityQueue<>();
         queue.addAll(graph.getConnection(source));
         //discovered.add(source);
 
         int iterations = 0;
 
-        while(!queue.isEmpty() && iterations < 50){
-
-
+        while(!queue.isEmpty()){
 
             VertexRelation rel = queue.poll();
             Vertex v = rel.getEnd();
 
-
-
             if(!discovered.contains(rel) ){
-                System.out.println("Iteration: "  + iterations  + "\n---------------------");
-                System.out.println("Relation: " + rel + " START: " + rel.getStart().getId() + "\t END: " + v.getId() + " \n");
+                //System.out.println("Iteration: "  + iterations  + "\n---------------------");
+                //System.out.println("Relation: " + rel + " START: " + rel.getStart().getId() + "\t END: " + v.getId() + " \n");
 
                 discovered.add(rel);
                 Double costTillVertex = costMap.get(rel.getStart()).costs();
 
-                System.out.println("costTillVertex = " + costTillVertex + " \n");
+                //System.out.println("costTillVertex = " + costTillVertex + " \n");
 
-                costMap.put(v, new CostNode(rel.getStart(), rel.getCosts() + costTillVertex));
+                CostNode c = new CostNode(rel.getStart(), rel.getCosts() + costTillVertex);
+                //System.out.println("c.costs() = " + c.costs());
+
+                if(costMap.get(v).costs() < c.costs){
+                    continue;
+                } else{
+                    costMap.put(v, c);
+                }
+
                 queue.addAll(graph.getConnection(v));
+
+//                for(VertexRelation r : graph.getConnection(v)){
+//                    if(!discovered.contains(r)) queue.add(r);
+//                }
                 iterations++;
             }
+
         }
 
     }
 
-//    private void calculateCosts(){
-//        Queue<Vertex> queue = new PriorityQueue<>();
-//        queue.add(source);
-//        discovered.add(source);
-//
-//        int iterations = 0;
-//
-//        while(!queue.isEmpty() && iterations < 100){
-//
-//            for(VertexRelation i : graph.getConnection(queue.poll())){
-//
-//                Vertex v = i.getEnd();
-//                //System.out.println("NODE: " + v);
-//                if(!discovered.contains(v)){
-//                    discovered.add(v);
-//                    queue.add(v);
-//                    costMap.replace(v, this.graph.getDistance(i.getStart(), v));
-//                    iterations++;
-//                }
-//            }
-//        }
+    public List<Vertex> getPath(Vertex v){
 
-//        System.out.println("iterations = " + iterations);
-//
-//    }
+        List<Vertex> path = new LinkedList<>();
+
+        if(costMap.get(v).costs() == Double.POSITIVE_INFINITY){
+            System.out.println("NO PATH TO THIS POINT!");
+            return path;
+        }
+
+        path.add(v);
+        CostNode c = costMap.get(v);
+        System.out.println("COSTS TO NODE:" + c.costs());
+
+        while(!c.over().equals(source)){
+            path.add(c.over());
+            c = costMap.get(c.over());
+        }
+
+        return path;
+    }
 
     public List<VertexRelation> discovered() { return this.discovered; }
 

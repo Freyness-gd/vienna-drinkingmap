@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import codedraw.*;
 import java.time.LocalTime;
+import java.util.List;
+
 public class main {
 
     public static OSM osm = OSM.getInstance("data/map.osm");
@@ -82,7 +84,7 @@ public class main {
 
 
         Vertex source = OSM.getVertex("33196433");
-        System.out.println(matrix.getConnection(source));
+        //System.out.println(matrix.getConnection(source));
 
 //        VertexRelation vr1 = new VertexRelation(OSM.getVertex("33196433"), OSM.getVertex("1950497176"));
 //        VertexRelation vr2 = new VertexRelation(OSM.getVertex("1950497176"), OSM.getVertex("33196433") );
@@ -112,8 +114,14 @@ public class main {
 
         GUI.drawNode(source, Color.red, 5);
 
-        for(VertexRelation v : alg.discovered()){
-            GUI.drawVertexRelation(v);
+//        for(VertexRelation v : alg.discovered()){
+//            GUI.drawVertexRelation(v);
+//        }
+
+        List<Vertex> pathTo = alg.getPath(OSM.getVertex("33182887"));
+
+        for(Vertex v : pathTo){
+            GUI.drawNode(v);
         }
 
         GUI.show();

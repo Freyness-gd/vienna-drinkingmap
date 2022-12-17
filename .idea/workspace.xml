@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment=":twisted_rightwards_arrows: Merging latest &quot;dev&quot; with &quot;master&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/VertexRelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/VertexRelation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +35,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1671276510" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1670970198" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,6 +113,8 @@
         <item itemvalue="Application.main" />
         <item itemvalue="Application.graph_test" />
         <item itemvalue="Application.djd" />
+        <item itemvalue="Application.main" />
+        <item itemvalue="Application.graph_test" />
       </list>
     </recent_temporary>
   </component>
@@ -139,6 +159,11 @@
       <workItem from="1670943907426" duration="4554000" />
       <workItem from="1670950718004" duration="2215000" />
       <workItem from="1670969005519" duration="820000" />
+      <workItem from="1671005283528" duration="43000" />
+      <workItem from="1671124555682" duration="10000" />
+      <workItem from="1671125679479" duration="68000" />
+      <workItem from="1671227880703" duration="484000" />
+      <workItem from="1671276401318" duration="3895000" />
     </task>
     <task id="LOCAL-00001" summary=":loud_sound: updated .gitignore">
       <created>1666830371145</created>
@@ -170,6 +195,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":loud_sound: updated .gitignore" />
     <MESSAGE value=":white_check_mark: Added Dijkstra Test" />
-    <option name="LAST_COMMIT_MESSAGE" value=":white_check_mark: Added Dijkstra Test" />
+    <MESSAGE value=":art: Vertex and VertexRelation now implement Comparable (needed for Priority Queue)" />
+    <MESSAGE value=":construction: Dijkstra Algo" />
+    <MESSAGE value=":children_crossing: Added tests in &quot;main&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value=":children_crossing: Added tests in &quot;main&quot;" />
   </component>
 </project>
