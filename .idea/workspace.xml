@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment="">
+    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment=":children_crossing: Added tests in &quot;main&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +87,8 @@
 }</component>
   <component name="RunManager" selected="Application.main">
     <configuration name="djd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="djd" />
       <module name="vienna-drinkingmap" />
       <method v="2">
@@ -95,6 +96,8 @@
       </method>
     </configuration>
     <configuration name="graph_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="graph_test" />
       <module name="vienna-drinkingmap" />
       <method v="2">
@@ -102,12 +105,19 @@
       </method>
     </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="vienna-drinkingmap" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.djd" />
+      <item itemvalue="Application.graph_test" />
+      <item itemvalue="Application.main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.main" />
@@ -164,6 +174,7 @@
       <workItem from="1671125679479" duration="68000" />
       <workItem from="1671227880703" duration="484000" />
       <workItem from="1671276401318" duration="3895000" />
+      <workItem from="1672192199791" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary=":loud_sound: updated .gitignore">
       <created>1666830371145</created>

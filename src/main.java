@@ -2,7 +2,9 @@ import javax.xml.stream.XMLStreamException;
 import java.awt.*;
 import java.io.FileNotFoundException;
 import java.util.*;
+
 import codedraw.*;
+
 import java.time.LocalTime;
 import java.util.List;
 
@@ -22,8 +24,8 @@ public class main {
 
         streets.putAll(OSMParser.getStreets(OSM.getMap()));
 
-        for(Street i : streets.values()){
-            switch(i.getType()){
+        for (Street i : streets.values()) {
+            switch (i.getType()) {
                 case "highway-primary":
                     GUI.setColour(Color.red);
                     GUI.setLineWidth(4);
@@ -61,22 +63,21 @@ public class main {
             }
 
 
-
         }
         ArrayList<Vertex> toRemove = new ArrayList<>();
 
         System.out.println("Initial size: " + OSM.getMap().size());
 
-       for(Vertex v : OSM.getMap().values()){
-           if(!matrix.addConnection(v, streets)){
-               toRemove.add(v);
-           }
+        for (Vertex v : OSM.getMap().values()) {
+            if (!matrix.addConnection(v, streets)) {
+                toRemove.add(v);
+            }
 
-       }
+        }
 
         System.out.println("MATRIX: " + matrix.getSize());
 
-        for(Vertex v : toRemove){
+        for (Vertex v : toRemove) {
             OSM.getMap().remove(v.getId());
         }
 
@@ -120,12 +121,11 @@ public class main {
 
         List<Vertex> pathTo = alg.getPath(OSM.getVertex("33182887"));
 
-        for(Vertex v : pathTo){
+        for (Vertex v : pathTo) {
             GUI.drawNode(v);
         }
 
         GUI.show();
-
 
 
         //System.out.println("Total Run Time: " + (LocalTime.now().getSecond() - start.getSecond()));

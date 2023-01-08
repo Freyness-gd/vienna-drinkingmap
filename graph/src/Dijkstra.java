@@ -8,16 +8,16 @@ public class Dijkstra {
 
     private final List<VertexRelation> discovered = new ArrayList<>();
 
-    public Dijkstra(Vertex source, Map<String, Vertex> map, AdjMatrix graph){
+    public Dijkstra(Vertex source, Map<String, Vertex> map, AdjMatrix graph) {
         this.source = source;
         this.createMap(map);
         this.graph = graph;
         this.calculateCosts();
     }
 
-    private void createMap(Map<String, Vertex> map){
+    private void createMap(Map<String, Vertex> map) {
 
-        for(Vertex v : map.values()){
+        for (Vertex v : map.values()) {
             costMap.put(v, new CostNode(null, Double.POSITIVE_INFINITY));
         }
 
@@ -25,7 +25,7 @@ public class Dijkstra {
     }
 
 
-    private void calculateCosts(){
+    private void calculateCosts() {
 
         Queue<VertexRelation> queue = new PriorityQueue<>();
         queue.addAll(graph.getConnection(source));
@@ -33,12 +33,12 @@ public class Dijkstra {
 
         int iterations = 0;
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
 
             VertexRelation rel = queue.poll();
             Vertex v = rel.getEnd();
 
-            if(!discovered.contains(rel) ){
+            if (!discovered.contains(rel)) {
                 //System.out.println("Iteration: "  + iterations  + "\n---------------------");
                 //System.out.println("Relation: " + rel + " START: " + rel.getStart().getId() + "\t END: " + v.getId() + " \n");
 
@@ -50,9 +50,9 @@ public class Dijkstra {
                 CostNode c = new CostNode(rel.getStart(), rel.getCosts() + costTillVertex);
                 //System.out.println("c.costs() = " + c.costs());
 
-                if(costMap.get(v).costs() < c.costs){
+                if (costMap.get(v).costs() < c.costs) {
                     continue;
-                } else{
+                } else {
                     costMap.put(v, c);
                 }
 
@@ -68,11 +68,11 @@ public class Dijkstra {
 
     }
 
-    public List<Vertex> getPath(Vertex v){
+    public List<Vertex> getPath(Vertex v) {
 
         List<Vertex> path = new LinkedList<>();
 
-        if(costMap.get(v).costs() == Double.POSITIVE_INFINITY){
+        if (costMap.get(v).costs() == Double.POSITIVE_INFINITY) {
             System.out.println("NO PATH TO THIS POINT!");
             return path;
         }
@@ -81,7 +81,7 @@ public class Dijkstra {
         CostNode c = costMap.get(v);
         System.out.println("COSTS TO NODE:" + c.costs());
 
-        while(!c.over().equals(source)){
+        while (!c.over().equals(source)) {
             path.add(c.over());
             c = costMap.get(c.over());
         }
@@ -89,20 +89,27 @@ public class Dijkstra {
         return path;
     }
 
-    public List<VertexRelation> discovered() { return this.discovered; }
+    public List<VertexRelation> discovered() {
+        return this.discovered;
+    }
 
-    class CostNode{
+    class CostNode {
 
         private final Vertex over;
         private final Double costs;
 
-        public CostNode(Vertex over, Double costs){
+        public CostNode(Vertex over, Double costs) {
             this.over = over;
             this.costs = costs;
         }
 
-        public Vertex over(){ return this.over; }
-        public Double costs(){ return this.costs; }
+        public Vertex over() {
+            return this.over;
+        }
+
+        public Double costs() {
+            return this.costs;
+        }
 
     }
 
