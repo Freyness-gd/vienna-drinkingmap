@@ -1,9 +1,6 @@
-import java.awt.*;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.lang.reflect.Array;
 import java.util.*;
-
 import javax.xml.stream.*;
 import javax.xml.stream.events.*;
 
@@ -13,13 +10,12 @@ public class OSMParser {
     private static OSMParser parser;
     private static XMLEventReader eventReader;
     private static String path;
-    //private static OSM osm;
 
     private OSMParser(String path) {
 
-        //OSMParser.osm = OSM.getInstance(path);
         OSMParser.path = path;
 
+        // Creates new file reader
         try {
             XMLInputFactory factory = XMLInputFactory.newInstance();
             eventReader = factory.createXMLEventReader(new FileReader(path));
@@ -30,6 +26,7 @@ public class OSMParser {
 
     }
 
+    // Singleton getInstance builder
     public static synchronized OSMParser getInstance(String path) {
         if (parser == null)
             parser = new OSMParser(path);

@@ -2,11 +2,11 @@ import javax.xml.stream.XMLStreamException;
 import java.awt.*;
 import java.io.FileNotFoundException;
 import java.util.*;
-
-import codedraw.*;
-
 import java.time.LocalTime;
 import java.util.List;
+
+// TODO: add annotations
+// TODO: document code
 
 public class main {
 
