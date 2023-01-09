@@ -11,6 +11,7 @@ public class OSM {
 
     private static Map<String, Vertex> vertex = new HashMap<>();
 
+    // Open the map and parse it
     private OSM(String path) {
         OSM.path = path;
         parser = OSMParser.getInstance(path);

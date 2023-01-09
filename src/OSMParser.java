@@ -30,10 +30,6 @@ public class OSMParser {
 
     }
 
-    ;
-
-    //public static OSM getOsm() { return OSMParser.osm; }
-
     public static synchronized OSMParser getInstance(String path) {
         if (parser == null)
             parser = new OSMParser(path);

@@ -115,6 +115,9 @@ public class main {
 
         GUI.drawNode(source, Color.red, 5);
 
+
+
+
 //        for(VertexRelation v : alg.discovered()){
 //            GUI.drawVertexRelation(v);
 //        }

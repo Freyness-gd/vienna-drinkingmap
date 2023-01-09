@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment=":children_crossing: Added tests in &quot;main&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment=":art: Format code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +175,8 @@
       <workItem from="1671227880703" duration="484000" />
       <workItem from="1671276401318" duration="3895000" />
       <workItem from="1672192199791" duration="327000" />
+      <workItem from="1673217914182" duration="133000" />
+      <workItem from="1673303929496" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary=":loud_sound: updated .gitignore">
       <created>1666830371145</created>
@@ -197,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670596942204</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=":art: Format code">
+      <created>1673218039184</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673218039184</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +218,7 @@
     <MESSAGE value=":art: Vertex and VertexRelation now implement Comparable (needed for Priority Queue)" />
     <MESSAGE value=":construction: Dijkstra Algo" />
     <MESSAGE value=":children_crossing: Added tests in &quot;main&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value=":children_crossing: Added tests in &quot;main&quot;" />
+    <MESSAGE value=":art: Format code" />
+    <option name="LAST_COMMIT_MESSAGE" value=":art: Format code" />
   </component>
 </project>
