@@ -6,7 +6,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 // TODO: add annotations
-// TODO: document code
+// TODO: document code functionality
 
 public class main {
 
