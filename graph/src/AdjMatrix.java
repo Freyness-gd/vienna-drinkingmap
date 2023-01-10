@@ -3,25 +3,25 @@ import java.util.HashMap;
 
 public class AdjMatrix {
 
-    private HashMap<Vertex, ArrayList<VertexRelation>> matrix = new HashMap<>();
-    private OSM osm;
+    private final HashMap<Vertex, ArrayList<Edge>> matrix = new HashMap<>();
+    private final OSM osm;
 
-    public AdjMatrix(OSM osm) {
-        this.osm = osm;
+    public AdjMatrix(String path) {
+        this.osm = OSM.getInstance(path);
     }
 
     public boolean addConnection(Vertex vertex, HashMap<String, Street> streets) {
 
-        ArrayList<VertexRelation> vertexMatrix = new ArrayList<>();
+        ArrayList<Edge> vertexMatrix = new ArrayList<>();
         boolean inStreet = false;
 
         for (Street s : streets.values()) {
             for (Edge e : s.getEdges()) {
-                if (e.gethead().equals(vertex)) {
-                    vertexMatrix.add(new VertexRelation(e.gethead(), e.gettail()));
+                if (e.getStart().equals(vertex)) {
+                    vertexMatrix.add(new Edge(e.getStart(), e.getEnd()));
                     inStreet = true;
-                } else if (e.gettail().equals(vertex)) {
-                    vertexMatrix.add(new VertexRelation(e.gettail(), e.gethead()));
+                } else if (e.getEnd().equals(vertex)) {
+                    vertexMatrix.add(new Edge(e.getEnd(), e.getStart()));
                     inStreet = true;
                 }
             }
@@ -36,9 +36,9 @@ public class AdjMatrix {
 
     public double getDistance(Vertex start, Vertex end) {
 
-        for (VertexRelation v : matrix.get(start)) {
+        for (Edge v : matrix.get(start)) {
             if (v.getEnd().equals(end)) {
-                return v.getCosts();
+                return v.getLength();
             }
         }
 
@@ -61,7 +61,7 @@ public class AdjMatrix {
         System.out.println(matrix.get(v));
     }
 
-    public ArrayList<VertexRelation> getConnection(Vertex v) {
+    public ArrayList<Edge> getConnection(Vertex v) {
         return matrix.get(v);
     }
 

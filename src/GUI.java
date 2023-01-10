@@ -28,10 +28,10 @@ public class GUI {
     }
 
     public static void drawEdge(Edge e) {
-        double startX = mapLon(e.gethead().getLon());
-        double startY = mapLat(e.gethead().getLat());
-        double endX = mapLon(e.gettail().getLon());
-        double endY = mapLat(e.gettail().getLat());
+        double startX = mapLon(e.getStart().lon());
+        double startY = mapLat(e.getStart().lat());
+        double endX = mapLon(e.getEnd().lon());
+        double endY = mapLat(e.getEnd().lat());
 
         cd.drawLine(startX, windowrange - startY, endX, windowrange - endY);
     }
@@ -42,12 +42,12 @@ public class GUI {
 
     public static void drawNode(Vertex v) {
         cd.setColor(Color.BLACK);
-        cd.fillCircle(mapLon(v.getLon()), windowrange - mapLat(v.getLat()), 3);
+        cd.fillCircle(mapLon(v.lon()), windowrange - mapLat(v.lat()), 3);
     }
 
     public static void drawNode(Vertex v, Color c, double r) {
         cd.setColor(c);
-        cd.fillCircle(mapLon(v.getLon()), windowrange - mapLat(v.getLat()), r);
+        cd.fillCircle(mapLon(v.lon()), windowrange - mapLat(v.lat()), r);
     }
 
     public static void setColour(Color c) {
@@ -62,17 +62,13 @@ public class GUI {
         Collection<Vertex> c = v.values();
 
         for (Vertex i : c) {
-            cd.fillCircle(mapLon(i.getLon()), mapLat(i.getLat()), 3);
+            cd.fillCircle(mapLon(i.lon()), mapLat(i.lat()), 3);
         }
 
     }
 
     public static void drawStreet(Street s) {
         if (s != null) drawEdge(s.getEdges());
-    }
-
-    public static void drawVertexRelation(VertexRelation v) {
-        drawNode(v.getEnd());
     }
 
     public static int mapLon(double val) {

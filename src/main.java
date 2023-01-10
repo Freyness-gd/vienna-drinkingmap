@@ -9,22 +9,18 @@ import java.util.List;
 // TODO: document code functionality
 
 public class main {
-
-    public static OSM osm = OSM.getInstance("data/map.osm");
-    public static HashMap<String, Street> streets = new HashMap<>();
-
+    public static String path = "data/map.osm";
     public static int windowrange = 1000;
+    public static OSM osm = OSM.getInstance(path);
     public static GUI gui = GUI.getInstance(windowrange, OSM.getBounds());
-    public static OSMParser parser = OSMParser.getInstance("data/map.osm");
-    public static AdjMatrix matrix = new AdjMatrix(osm);
+    public static AdjMatrix matrix = new AdjMatrix(path);
+    //public static OSM osm = OSM.getInstance("data/map.osm");
 
     public static void main(String[] args) throws XMLStreamException, FileNotFoundException {
 
         LocalTime start = LocalTime.now();
 
-        streets.putAll(OSMParser.getStreets(OSM.getMap()));
-
-        for (Street i : streets.values()) {
+        for (Street i : osm.map().values()) {
             switch (i.getType()) {
                 case "highway-primary":
                     GUI.setColour(Color.red);
@@ -69,7 +65,7 @@ public class main {
         System.out.println("Initial size: " + OSM.getMap().size());
 
         for (Vertex v : OSM.getMap().values()) {
-            if (!matrix.addConnection(v, streets)) {
+            if (!matrix.addConnection(v, osm.map())) {
                 toRemove.add(v);
             }
 
@@ -78,7 +74,7 @@ public class main {
         System.out.println("MATRIX: " + matrix.getSize());
 
         for (Vertex v : toRemove) {
-            OSM.getMap().remove(v.getId());
+            OSM.getMap().remove(v.id());
         }
 
         System.out.println("Final size: " + OSM.getMap().size());

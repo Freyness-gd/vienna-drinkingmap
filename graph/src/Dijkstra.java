@@ -6,7 +6,7 @@ public class Dijkstra {
     private final Vertex source;
     private final AdjMatrix graph;
 
-    private final List<VertexRelation> discovered = new ArrayList<>();
+    private final List<Edge> discovered = new ArrayList<>();
 
     public Dijkstra(Vertex source, Map<String, Vertex> map, AdjMatrix graph) {
         this.source = source;
@@ -27,7 +27,7 @@ public class Dijkstra {
 
     private void calculateCosts() {
 
-        Queue<VertexRelation> queue = new PriorityQueue<>();
+        Queue<Edge> queue = new PriorityQueue<>();
         queue.addAll(graph.getConnection(source));
         //discovered.add(source);
 
@@ -35,7 +35,7 @@ public class Dijkstra {
 
         while (!queue.isEmpty()) {
 
-            VertexRelation rel = queue.poll();
+            Edge rel = queue.poll();
             Vertex v = rel.getEnd();
 
             if (!discovered.contains(rel)) {
@@ -47,7 +47,7 @@ public class Dijkstra {
 
                 //System.out.println("costTillVertex = " + costTillVertex + " \n");
 
-                CostNode c = new CostNode(rel.getStart(), rel.getCosts() + costTillVertex);
+                CostNode c = new CostNode(rel.getStart(), rel.getLength() + costTillVertex);
                 //System.out.println("c.costs() = " + c.costs());
 
                 if (costMap.get(v).costs() < c.costs) {
@@ -58,7 +58,7 @@ public class Dijkstra {
 
                 queue.addAll(graph.getConnection(v));
 
-//                for(VertexRelation r : graph.getConnection(v)){
+//                for(Edge r : graph.getConnection(v)){
 //                    if(!discovered.contains(r)) queue.add(r);
 //                }
                 iterations++;
@@ -89,7 +89,7 @@ public class Dijkstra {
         return path;
     }
 
-    public List<VertexRelation> discovered() {
+    public List<Edge> discovered() {
         return this.discovered;
     }
 

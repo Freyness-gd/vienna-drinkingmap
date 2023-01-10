@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/graph/StreetStrcture/StreetStrcture.iml" filepath="$PROJECT_DIR$/graph/StreetStrcture/StreetStrcture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotations/annotations.iml" filepath="$PROJECT_DIR$/annotations/annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/graph/graph.iml" filepath="$PROJECT_DIR$/graph/graph.iml" />
       <module fileurl="file://$PROJECT_DIR$/vienna-drinkingmap.iml" filepath="$PROJECT_DIR$/vienna-drinkingmap.iml" />
     </modules>

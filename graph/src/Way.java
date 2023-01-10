@@ -4,6 +4,5 @@ public interface Way {
 
     String getName();
 
-    String toString();
 
 }

@@ -5,7 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="315ecbf9-aec0-4dc3-91d2-673ee287a700" name="Changes" comment=":memo: added some todos">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotations/annotations.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annotations/src/Precondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/graph.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graph/graph.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/AdjMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/AdjMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/VertexRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/src/Way.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/src/Way.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OSMParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vienna-drinkingmap.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vienna-drinkingmap.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +34,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -70,21 +88,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
+    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
     "last_opened_file_path": "D:/Projects/OOPA3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "Errors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.main">
     <configuration name="djd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
@@ -177,7 +204,9 @@
       <workItem from="1672192199791" duration="327000" />
       <workItem from="1673217914182" duration="133000" />
       <workItem from="1673303929496" duration="915000" />
-      <workItem from="1673304865125" duration="465000" />
+      <workItem from="1673304865125" duration="670000" />
+      <workItem from="1673305555021" duration="15000" />
+      <workItem from="1673369379823" duration="11209000" />
     </task>
     <task id="LOCAL-00001" summary=":loud_sound: updated .gitignore">
       <created>1666830371145</created>
@@ -228,13 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673304749384</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=":memo: added some todos">
+      <created>1673305480733</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673305480733</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CODE_SMELLS_PROFILE" value="Project Default" />
     <MESSAGE value=":loud_sound: updated .gitignore" />
     <MESSAGE value=":white_check_mark: Added Dijkstra Test" />
